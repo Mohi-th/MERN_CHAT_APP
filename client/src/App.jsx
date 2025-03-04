@@ -25,7 +25,7 @@ function App() {
 
   const token = localStorage.getItem("token");
 
-  useMemo(()=>{
+  useEffect(()=>{
     if (token) {
       dispatch(checkAuthUser(token)).then((data)=>{
         if(data?.payload?.success){
