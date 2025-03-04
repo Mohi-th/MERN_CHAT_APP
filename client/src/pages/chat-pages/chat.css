@@ -1,0 +1,14 @@
+#input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+  }
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* Hide scrollbar for IE & Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
