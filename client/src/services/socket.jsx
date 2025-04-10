@@ -4,7 +4,7 @@ let socket;
 
 export const connectSocket = (userId) => {
 
-    socket = io("http://localhost:3000");
+    socket = io(import.meta.env.VITE_SERVER);
 
     socket.on("connect", () => {
       console.log("Connected to socket");
