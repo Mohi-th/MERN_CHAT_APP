@@ -25,7 +25,7 @@ function App() {
 
   const token = localStorage.getItem("token");
 
-  useMemo(()=>{
+  useEffect(()=>{
     if (token) {
       dispatch(checkAuthUser(token)).then((data)=>{
         if(data?.payload?.success){
@@ -35,9 +35,9 @@ function App() {
         )
         return
       })
-    }else{
-      navigate("/home")
     }
+    navigate("/home")
+    
   },[token])
 
 
@@ -49,6 +49,7 @@ function App() {
   return (
     <div className="overflow-hidden ">
       <Routes>
+        
         <Route path="/home" element={
             <WelcomePanel />
         } />
